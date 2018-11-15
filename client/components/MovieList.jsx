@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { getMovies } from '../api-client'
 
 class MovieList extends React.Component {
@@ -34,8 +35,8 @@ class MovieList extends React.Component {
             <div>
                 <h3>hello MovieList</h3>
                 <ul>
-                    {this.state.movies.map(movie =>{
-                       return <li>{movie.title}</li>
+                    {this.state.movies.map((movie, i) =>{
+                       return <li key={i}><Link to = {`/movies/${movie.id}`}> {movie.title}</Link></li>
                     })}
                 </ul>
             </div>
