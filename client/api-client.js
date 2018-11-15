@@ -1,6 +1,7 @@
 import request from 'superagent'
 
-const baseURL= 'http://localhost:3000/api/v1'
+// const baseURL= 'http://localhost:3000/api/v1'
+const baseURL= '/api/v1'
 
 export function getMovies () {
     // return new Promise(( resolve, reject) => {
