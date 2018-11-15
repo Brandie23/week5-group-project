@@ -7,13 +7,14 @@ class MovieList extends React.Component {
 
         this.state = {
             error: null,
-            movies: ["no movies"]
+            movies: []
         }
         this.listMovies = this.listMovies.bind(this)
     }
 
     componentDidMount(){
         this.listMovies()
+
     }
 
     listMovies() {
@@ -32,9 +33,11 @@ class MovieList extends React.Component {
         return (
             <div>
                 <h3>hello MovieList</h3>
-                <p>
-                    {this.state.movies}
-                </p>
+                <ul>
+                    {this.state.movies.map(movie =>{
+                       return <li>{movie.title}</li>
+                    })}
+                </ul>
             </div>
         )
     }
