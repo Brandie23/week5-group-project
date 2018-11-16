@@ -37,7 +37,10 @@ export default class AddMovie extends React.Component {
 
   save(movie) {
     addMovie(movie).then(() => {
-      this.props.history.push('/movies')   //redirect
+      this.props.listMovies()
+      .then(() => {
+        this.props.history.push('/')   //redirect
+      })
     })
   }
 
