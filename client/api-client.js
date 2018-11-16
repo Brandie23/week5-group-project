@@ -17,4 +17,19 @@ export function getMovies () {
         console.log("movies from api", movies)
         return movies
     })
+
+
+}
+
+
+export function getMovie (id) {
+
+    return request.get(baseURL + '/movies/' + id)
+    .then(res => res.body)
+    .then(movie => {
+        console.log("movie = ", movie)
+        return movie
+    })
+
+
 }
