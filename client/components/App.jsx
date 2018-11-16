@@ -23,7 +23,7 @@ class App extends React.Component {
           <Route exact path='/' component={MovieList} />
           <Route exact path='/movies' component={MovieList} />
           <Route exact path='/movies/:id' component={MovieShow} />
-          <AddMovie />
+          <Route exact path='/addMovie' component={AddMovie} />
           <Footer />
         </Fragment>
 

@@ -12,10 +12,14 @@ function getMovie(id) {
 
 }
 
+function saveMovie (movie) {
+    return db('movies').insert(movie)
+  }
 
 
 
 module.exports = {
     getMovies,
-    getMovie
+    getMovie,
+    saveMovie
 }

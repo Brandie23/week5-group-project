@@ -11,6 +11,17 @@ router.get('/', (req, res) =>{
         // res.json(movies)
     })
 })
+
+router.post('/', function (req, res) {
+    const movie = {
+      ...req.body,
+    }
+    console.log(req.body)
+    db.saveMovie(movie).then(() => {
+        res.sendStatus(200)
+    })
+  })
+  
 router.get('/:id', (req, res) =>{
     const movieId = req.params.id
     db.getMovie(movieId)

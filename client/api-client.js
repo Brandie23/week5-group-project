@@ -20,5 +20,9 @@ export function getMovies () {
 }
 
 export function addMovie (movie, callback) {
-    return request.post(baseURL).send(movie)
+    console.log(movie)
+    return request.post(baseURL + '/movies/').send(movie)
+    .catch(err => {
+        console.log(err)
+    })
 }
