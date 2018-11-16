@@ -2,10 +2,10 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('movies', (table) => {
         table.increments('id').primary(),
-        table.string('Catergory'),
-        table.string('Title'),
-        table.string('Director'),
-        table.string('Release_Date')
+        table.string('catergory'),
+        table.string('title'),
+        table.string('director'),
+        table.string('release_date')
     })
 };
 
