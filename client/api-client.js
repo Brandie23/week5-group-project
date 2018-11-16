@@ -14,15 +14,30 @@ export function getMovies () {
     return request.get(baseURL + '/movies/')
     .then(res => res.body)
     .then(movies => {
-        console.log("movies from api", movies)
+        // console.log("movies from api", movies)
         return movies
     })
 }
 
 export function addMovie (movie, callback) {
-    console.log(movie)
+    // console.log(movie)
     return request.post(baseURL + '/movies/').send(movie)
     .catch(err => {
         console.log(err)
     })
+
+
+}
+
+
+export function getMovie (id) {
+
+    return request.get(baseURL + '/movies/' + id)
+    .then(res => res.body)
+    .then(movie => {
+        // console.log("movie = ", movie)
+        return movie
+    })
+
+
 }

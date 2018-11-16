@@ -3,7 +3,7 @@ import {addMovie} from '../api-client'
 
 const defaultState = {
   title: '',
-  catergory: '',
+  category: '',
   director: '',
   release_date: ''
 }
@@ -49,9 +49,9 @@ export default class AddMovie extends React.Component {
             onChange={this.handleChange}
             value={this.state.title}
           /></p>
-          <p><input placeholder='Category' name='catergory'
+          <p><input placeholder='Category' name='category'
             onChange={this.handleChange}
-            value={this.state.catergory}
+            value={this.state.category}
           /></p>
           <p><input placeholder='Director' name='director'
             onChange={this.handleChange}
