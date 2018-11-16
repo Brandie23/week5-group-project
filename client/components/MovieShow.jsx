@@ -11,23 +11,29 @@ class MovieShow extends React.Component {
             id: this.props.match.params.id,
             error: null,
             movie: {
-                title: "die hard",
-                director: "christopher nolan"
+                title: "This should not show",
+                director: "sort it!"
             }
 
         }
         // this.listMovies = this.listMovies.bind(this)
     }
 
-    componentDidMount(){
-        this.showMovie(this.state.id)
+    componentDidMount() {
+        this.showMovie(this.props.match.params.id)
+    }
+
+    componentWillReceiveProps(props){
+        // console.log('parameter id ', this.props.match.params.id)
+        // console.log("componentmount id = ", this.state.id)
+        this.showMovie(props.match.params.id)
 
     }
 
     showMovie(id) {
         getMovie(id)
             .then(movie => {
-                console.log("movie", movie)
+                // console.log("movie", movie)
                 this.setState({
                     movie: movie
                 })
@@ -38,9 +44,11 @@ class MovieShow extends React.Component {
 
 
     render() {
+        console.log('parameter id ', this.props.match.params.id)
+        console.log("componentmount id = ", this.state.id)
 
         return (
-            <div>
+            <div className="grid movie-show">
                 <h3>{this.state.movie.title}</h3>
                 <p>
                     Category: {this.state.movie.category}

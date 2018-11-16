@@ -21,7 +21,7 @@ class MovieList extends React.Component {
     listMovies() {
         getMovies()
             .then(movies => {
-                console.log("movies", movies)
+                // console.log("movies", movies)
                 this.setState({
                     movies: movies
                 })
@@ -32,7 +32,7 @@ class MovieList extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="grid movie-list">
                 <h3>hello MovieList</h3>
                 <ul>
                     {this.state.movies.map((movie, i) =>{

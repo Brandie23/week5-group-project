@@ -1,1 +1,17 @@
-@import 'bootstrap'
+.grid {
+    display: grid
+}
+
+.main {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "movie-list movie-show"
+
+}
+
+.movie-list {
+    grid-area: movie-list;
+}
+
+.movie-show {
+    grid-area: movie-show;
+}
