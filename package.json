@@ -10,7 +10,7 @@
     "start": "webpack && node server",
     "dev": "nodemon server & webpack --watch",
     "test": "jest --watchAll",
-    "postinstall": "knex migrate:latest && knex seed:run"
+    "postinstall": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
   "babel": {
     "presets": [
