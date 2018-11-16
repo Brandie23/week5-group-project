@@ -11,8 +11,8 @@ class Nav extends React.Component {
     render() {
     return (
     <nav className="navbar grid">
-              <p className="navbar-item"><Link to={`/movies/`}>Jobs</Link></p>
-              <p className="navbar-item"><Link to={`/movies/addMovie`}>Add Job</Link></p>
+              <p className="navbar-item"><Link to={`/movies/`}>Movies</Link></p>
+              <p className="navbar-item"><Link to={`/movies/addMovie`}>Add Movie</Link></p>
               <p className="navbar-item"><Link to={`/`}>About</Link></p>        
     </nav>
   )
