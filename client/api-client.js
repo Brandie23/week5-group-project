@@ -18,3 +18,7 @@ export function getMovies () {
         return movies
     })
 }
+
+export function addMovie (movie, callback) {
+    return request.post(baseURL).send(movie)
+}
